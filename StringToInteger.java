@@ -4,6 +4,7 @@ class Solution {
         double num = 0;
       
         str = str.trim();
+        
         if(str.length() == 0)
             return 0;
         
@@ -22,15 +23,14 @@ class Solution {
             }
         }
         
-        for(int i = s;i<=e;i++){
-      System.out.println((int)(str.charAt(i)-'0') + " "+num);   
+        for(int i = s;i<=e;i++)
+        {
          num = (num * 10) + (int)(str.charAt(i) - '0'); 
         }
         
         if(neg == 1)
              num = -1L * num;
       
-        System.out.println(num+" "+neg);
         if(num >= Integer.MAX_VALUE)
             return Integer.MAX_VALUE;
         
